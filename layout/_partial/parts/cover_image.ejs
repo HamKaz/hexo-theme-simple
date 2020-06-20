@@ -1,0 +1,5 @@
+<% if(item.cover_image) { %>
+  <a href="<%- config.root %><%- item.path %>">
+    <img class="img-fluid cover-image img-obj-fit" src="<%- config.root %><%- item.cover_image || theme.default_cover_image %>" alt="<%- item.title || "Untitled" %>">
+  </a>
+<% } %>

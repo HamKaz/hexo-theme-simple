@@ -1,0 +1,12 @@
+<!-- index.ejs -->
+<div class="row">
+  <%- partial('_partial/navigation') %>
+</div>
+<div class="row">
+  <div class="col-12 col-md-8 mx-0 my-0 px-0">
+    <%- partial('_partial/post-index') %>
+  </div>
+  <div class="col-12 col-md-4 mx-0 my-0 px-0 d-none d-md-block">
+    <%- partial('_partial/sidebar', { item: page }) %>
+  </div>
+</div>

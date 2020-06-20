@@ -1,0 +1,8 @@
+<section class="row mx-3 mt-3 mb-0">
+	<% if(theme.author_icon) { %>
+	  <img class="img-fluid cover-image" src="<%- config.root %><%- theme.author_icon || theme.default_cover_image %>" alt="<%= __('author_icon') %>">
+	<% } %>
+</section>
+<section class="row mx-auto mx-3 mt-3 mb-0">
+	<%- partial('_partial/parts/author') %>
+</section>

@@ -1,0 +1,12 @@
+<section class="row mx-auto mx-3 mt-3 mb-0">
+  <% if (site.tags.length){ %>
+    <p class="h5"><%= __('tags') %></p>
+  <% } %>
+</section>
+<section class="row mx-3 my-0">
+  <% if (site.tags.length){ %>
+    <ul>
+      <%- list_tags({show_count: theme.show_count}) %>
+    </ul>
+  <% } %>
+</section>

@@ -1,0 +1,14 @@
+<section class="row mx-auto mx-3 mt-3 mb-0">
+  <% if (site.posts.length){ %>
+    <p class="h5"><%= __('recent_posts') %></p>
+  <% } %>
+</section>
+<section class="row mx-3 my-0">
+  <% if (site.posts.length){ %>
+    <% site.posts.sort('date', -1).limit(5).each(function(post){ %>
+      <ul>
+        <a href="<%- url_for(post.path) %>"><%= post.title || '(no title)' %></a>
+      </ul>
+    <% }); %>
+  <% }; %>
+</section>

@@ -1,0 +1,45 @@
+# Header
+menu:
+  Home: /
+  About: /about
+  Contact: /contact
+
+# Favicon
+favicon_url:
+
+# Default Image for Posts
+default_background_image: images/bg-img.png
+default_cover_image: images/default.jpg
+default_self_image: images/bg-img.png
+author_icon: images/default.jpg
+
+# Recommendation Post
+recommendation: recommend
+
+# Google Analytics Tracking ID
+google_analytics:
+
+# Social Accounts
+email_url:
+twitter_url: https://twitter.com/?lang=en
+facebook_url:
+youtube_url: https://www.youtube.com/
+instagram_url: https://www.instagram.com/
+linkedin_url:
+dribbble_url:
+github_url:
+googleplus_url:
+behance_url:
+fivehundredpx_url:
+
+# Disqus comments
+disqus_shortname:
+
+# Sidebar
+sidebar: right
+widgets:
+- about  # aboutを追加
+- archive
+- tag
+- category
+- recent_posts
