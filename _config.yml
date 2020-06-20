@@ -43,3 +43,8 @@ widgets:
 - tag
 - category
 - recent_posts
+
+# Page Type
+pagetype_index : 1
+pagetype_page: 2
+pagetype_post: 3

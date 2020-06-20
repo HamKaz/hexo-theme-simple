@@ -1,9 +1,9 @@
 <!-- post.ejs -->
 <div class="row">
   <div class="col-12 col-md-8 mx-0 my-0 px-0">
-    <%- partial('_partial/post-full') %>
+    <%- partial('_partial/main', { page_type: theme.pagetype_post }) %>
   </div>
   <div class="col-12 col-md-4 mx-0 my-0 px-0 d-none d-md-block">
-    <%- partial('_partial/sidebar_post', { item: page }) %>
+    <%- partial('_partial/aside', { page_type: theme.pagetype_post }) %>
   </div>
 </div>

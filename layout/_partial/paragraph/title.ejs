@@ -1,0 +1,9 @@
+<% if(title_jump === true) { %>
+  <a href="<%- config.root %><%- item.path %>">
+<% } %>
+<p class="title mx-0 my-0">
+  <%- item.title || "Untitled" %>
+</p>
+<% if(title_jump === true) { %>
+  </a>
+<% } %>
