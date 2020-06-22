@@ -7,11 +7,14 @@ author_icon: 著者の写真
 category: カテゴリ
 categories: カテゴリ一覧
 comment: コメント
-powered_by: Powered by
+home: ホーム
+month: 月
 newer: 次の記事
 next: 次へ
 older: 前の記事
 page: ページ %d
+pages: ページ
+powered_by: Powered by
 prev: 戻る
 read_more: おすすめを見る
 recent_posts: 最近の投稿から
@@ -24,3 +27,4 @@ tagcloud: タグクラウド
 top: トップに戻る
 toc_title: 目次
 tweets: ツイート
+year: 年

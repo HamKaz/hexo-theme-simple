@@ -1,0 +1,15 @@
+<li class="breadcrumbs_li">
+    <a class="breadcrumbs_link" href="<%= item.date.format('YYYY') %>">
+        <%= item.date.format('YYYY') %>
+    </a>
+</li>
+<li class="breadcrumbs_li">
+    <a class="breadcrumbs_link" href="<%= item.date.format('MM') %>">
+        <%= item.date.format('MM') %>
+    </a>
+</li>
+<li class="breadcrumbs_li">
+    <a class="breadcrumbs_link" href="<%- url_for(path) %>">
+        <%- page.title %>
+    </a>
+</li>

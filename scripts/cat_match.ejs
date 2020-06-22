@@ -1,0 +1,8 @@
+hexo.extend.helper.register('cat-match', function(path){
+    const category_slug = page.path.replace(config.category_dir + '/', '').replace(/\/page\/.+/,'').replace(/\/index.html/, '').split('/');
+    let category_url = '';
+    category_url += '/' + item;
+    const category_name = Object.keys(config.category_map).filter( (key) => {
+        return config.category_map[key] === item;
+    })
+})

@@ -13,7 +13,7 @@ default_cover_image: images/default.jpg
 default_self_image: images/bg-img.png
 author_icon: images/default.jpg
 
-# Recommendation Post
+# Recommendation Post Category
 recommendation: recommend
 
 # Google Analytics Tracking ID

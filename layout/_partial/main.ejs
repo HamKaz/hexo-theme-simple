@@ -1,35 +1,45 @@
 <main class="card mx-2 my-2 sidebar-sticky">
-<% if (page_type == theme.pagetype_index){ %>
-<!-- main for index -->
-  <% page.posts.forEach(function(item, index){ %>
-    <section class="row no-gutters mx-3 my-3">
-      <%- partial('parts/image', { item: item, img_jump: true }) %>
-    </section>
-    <section class="row mx-auto mx-3 my-0 px-3">
-      <%- partial('paragraph/title', { item: item, title_jump: true }) %>
-    </section>
-    <section class="row mx-auto mx-3 my-0">
-      <%- partial('paragraph/date', { item: item }) %>
-    </section>
-    <%- partial('parts/holizontal_line') %>
-  <% }); %>
-  <%- partial('pagination') %>
-<% } else { %>
-<!-- main for page, post -->
-  <section class="row mx-3 my-3">
-		<%- partial('parts/image', { item: page, img_jump: false }) %>
-	</section>
-	<section class="row mx-auto mx-3 my-0">
-		<%- partial('paragraph/title', { item: page, title_jump: false }) %>
-	</section>
-  <% if (page_type == theme.pagetype_post){ %>
-    <!-- date for post -->
-    <section class="row mx-auto mx-3 my-0">
-      <%- partial('paragraph/date', { item: page }) %>
-    </section>
-  <% } %>
-	<section class="row mx-3 my-0">
-		<%- partial('paragraph/content', { item: page }) %>
-	</section>
-<% } %>
+    <% if (page_type == theme.pagetype_index){ %>
+        <!-- main for index, archive, category, tag -->
+        <% if (!is_home()) { %>
+            <section class="row mx-3 my-3">
+                <%- partial('breadcrumbs') %>
+            </section>
+        <% } %>
+            <% page.posts.forEach(function(item, index){ %>
+                <section class="row no-gutters mx-3 my-3">
+                    <%- partial('parts/image', { item: item, img_jump: true }) %>
+                </section>
+                <section class="row mx-auto mx-3 my-0 px-3">
+                    <%- partial('paragraph/title', { item: item, title_jump: true }) %>
+                </section>
+                <section class="row mx-auto mx-3 my-0">
+                    <%- partial('paragraph/date', { item: item }) %>
+                </section>
+                <%- partial('parts/holizontal_line') %>
+            <% }); %>
+        <%- partial('pagination') %>
+    <% } else { %>
+        <!-- main for page, post -->
+
+            <section class="row mx-3 my-3">
+                <%- partial('breadcrumbs', {item: page}) %>
+            </section>
+            <section class="row mx-3 my-3">
+                <%- partial('parts/image', { item: page, img_jump: false }) %>
+            </section>
+            <section class="row mx-auto mx-3 my-0">
+                <%- partial('paragraph/title', { item: page, title_jump: false }) %>
+            </section>
+            <% if (page_type == theme.pagetype_post){ %>
+                <!-- date for post -->
+                <section class="row mx-auto mx-3 my-0">
+                    <%- partial('paragraph/date', { item: page }) %>
+                </section>
+            <% } %>
+            <section class="row mx-3 my-0">
+                <%- partial('paragraph/content', { item: page }) %>
+            </section>
+
+    <% } %>
 </main>

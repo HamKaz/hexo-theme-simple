@@ -1,0 +1,25 @@
+<% if (!is_home()) { %>
+    <nav class="breadcrumbs">
+        <ol class="breadcrumbs_ol">
+            <li class="breadcrumbs_li">
+                <a class="breadcrumbs_link" href="/">
+                    <% __('home') %>
+                </a>
+            </li>
+            <!-- if (is_home()) { -->
+                <!-- partial('parts/is_home') -->
+            <!-- } else -->
+            <% if (is_category()) { %>
+                <%- partial('parts/is_category') %>
+            <% } else if (is_tag()) { %>
+                <%- partial('parts/is_tag') %>
+            <% } else if (is_archive()) { %>
+                <%- partial('parts/is_archive') %>
+            <% } else if(is_post()) { %>
+                <%- partial('parts/is_post', {item: item}) %>
+            <% } else if (is_page()) { %>
+                <%- partial('parts/is_page') %>
+            <% } %>
+        </ol>
+    </nav>
+<% } %>

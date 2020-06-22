@@ -2,14 +2,8 @@
 <html lang="ja">
     <%- partial('_partial/head') %>
     <body>
-        <p class="h6">is_archive: <%- is_archive() %><hr></p>
-        <p class="h6">is_category: <%- is_category() %><hr></p>
-        <p class="h6">is_tag: <%- is_tag() %><hr></p>
-        <p class="h6">is_home: <%- is_home() %><hr></p>
-        <p class="h6">is_post: <%- is_post() %><hr></p>
-        <p class="h6">is_page: <%- is_page() %><hr></p>
         <%- partial('_partial/header') %>
-		<div class="container">
+        <div class="container">
 			<%- body %>
 		</div>
 		<%- partial('_partial/footer') %>

@@ -1,0 +1,17 @@
+<li class="breadcrumbs_li">
+    <a class="breadcrumbs_link" href="/">
+        <%= __('archives') %>
+    </a>
+</li>
+<li class="breadcrumbs_li">
+    <a class="breadcrumbs_link" href="/<%= config.archive_dir %>/<%= page.year %>/">
+        <%= page.year %><%- __('year') %>
+    </a>
+</li>
+<% if(page.month){ %>
+<li class="breadcrumbs_li">
+    <a class="breadcrumbs_link" href="<%- url_for(path) %>">
+        <%= page.month %><%- __('month') %>
+    </a>
+</li>
+<% } %>
