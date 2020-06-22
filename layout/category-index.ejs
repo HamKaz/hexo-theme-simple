@@ -1,0 +1,14 @@
+This is category.ejs.
+<hr>
+<section class="row mx-auto mx-3 mt-3 mb-0">
+  <% if (site.categories.length){ %>
+    <p class="h5"><%= __('categories') %></p>
+  <% } %>
+</section>
+<section class="row mx-3 my-0">
+  <% if (site.categories.length){ %>
+    <ul>
+      <%- list_categories({show_count: theme.show_count}) %>
+    </ul>
+  <% } %>
+</section>
