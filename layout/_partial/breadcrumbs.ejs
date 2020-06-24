@@ -16,7 +16,7 @@
             <% } else if (is_archive()) { %>
                 <%- partial('parts/is_archive') %>
             <% } else if(is_post()) { %>
-                <%- partial('parts/is_post', {item: item}) %>
+                <%- partial('parts/is_post') %>
             <% } else if (is_page()) { %>
                 <%- partial('parts/is_page') %>
             <% } %>

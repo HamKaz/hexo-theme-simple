@@ -1,14 +1,12 @@
 <aside class="card mx-2 my-2 sidebar-sticky">
-  <% if ((page_type == theme.pagetype_index) || (page_type == theme.pagetype_page)){ %>
-    <!-- sidebar for index or page -->
-    <% theme.widgets.forEach(function(widget){ %>
-    <%- partial('_widget/' + widget, { item: page }) %>
-    <%- partial('parts/holizontal_line') %>
-  <% }) %>
-  <% } else if (page_type == theme.pagetype_post){ %>
-    <!-- sidebar for post -->
-    <%- partial('_widget/toc', { item: page }) %>
-    <%- partial('parts/holizontal_line') %>
-  <% } %>
-  <%- partial('link/top', { item: page }) %>
+    <% if (is_home() || is_page()) { %>
+        <% theme.widgets.forEach(function(widget){ %>
+            <%- partial('_widget/' + widget, { item: page }) %>
+            <%- partial('parts/holizontal_line') %>
+        <% }) %>
+    <% } else if (is_post()){ %>
+        <%- partial('_widget/toc', { item: page }) %>
+        <%- partial('parts/holizontal_line') %>
+    <% } %>
+    <%- partial('link/top', { item: page }) %>
 </aside>

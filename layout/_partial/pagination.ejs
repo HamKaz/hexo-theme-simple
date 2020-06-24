@@ -4,12 +4,12 @@
     <section class="pagination my-2">
       <% if(page.prev) { %>
         <span class="previous mr-5">
-          <%- partial('parts/link_prev') %>
+          <%- partial('/link/prev') %>
         </span>
       <% } %>
       <% if(page.next) { %>
         <span class="next ml-5">
-          <%- partial('parts/link_next') %>
+          <%- partial('/link/next') %>
         </span>
       <% } %>
     </section>

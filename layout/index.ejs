@@ -1,13 +1,33 @@
 <div class="row">
-    <% if (is_home() == true) { %>
-        <%- partial('_partial/nav') %>
-    <% } %>
+    <% if (is_home()) {
+        partial('_partial/nav')
+    } %>
 </div>
 <div class="row">
     <div class="col-12 col-md-8 mx-0 my-0 px-0">
-        <%- partial('_partial/main', { page_type: theme.pagetype_index }) %>
+        <main class="card mx-2 my-2 sidebar-sticky">
+            <!-- index.ejs -->
+            <% if (!is_home()) { %>
+                <section class="row mx-3 my-3">
+                    <%- partial('_partial/breadcrumbs') %>
+                </section>
+            <% } %>
+            <% page.posts.each(function(item){ %>
+                <section class="row no-gutters mx-3 my-3">
+                    <%- partial('_partial/parts/image', { item: item, img_jump: true }) %>
+                </section>
+                <section class="row mx-auto mx-3 my-0 px-3">
+                    <%- partial('_partial/paragraph/title', { item: item, title_jump: true }) %>
+                </section>
+                <section class="row mx-auto mx-3 my-0">
+                    <%- partial('_partial/paragraph/date', { item: item }) %>
+                </section>
+                <%- partial('_partial/parts/holizontal_line') %>
+            <% }); %>
+            <%- partial('_partial/pagination') %>
+        </main>
     </div>
     <div class="col-12 col-md-4 mx-0 my-0 px-0 d-none d-md-block">
-        <%- partial('_partial/aside', { page_type: theme.pagetype_index }) %>
+        <%- partial('_partial/aside') %>
     </div>
 </div>
