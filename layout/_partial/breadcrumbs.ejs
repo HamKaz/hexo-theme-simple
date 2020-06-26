@@ -1,25 +1,37 @@
-<% if (!is_home()) { %>
-    <nav class="breadcrumbs">
-        <ol class="breadcrumbs_ol">
-            <li class="breadcrumbs_li">
-                <a class="breadcrumbs_link" href="/">
-                    <% __('home') %>
-                </a>
-            </li>
-            <!-- if (is_home()) { -->
-                <!-- partial('parts/is_home') -->
-            <!-- } else -->
-            <% if (is_category()) { %>
-                <%- partial('parts/is_category') %>
-            <% } else if (is_tag()) { %>
-                <%- partial('parts/is_tag') %>
-            <% } else if (is_archive()) { %>
-                <%- partial('parts/is_archive') %>
-            <% } else if(is_post()) { %>
-                <%- partial('parts/is_post') %>
-            <% } else if (is_page()) { %>
-                <%- partial('parts/is_page') %>
-            <% } %>
-        </ol>
-    </nav>
-<% } %>
+<%
+    var button = [
+        { title: 'home', url: 'http://localhost:4000/blog/' }
+    ]
+    var link
+    var lastindex = 0
+    var result = path.slice(path.indexOf(config.root)+1, path.length)
+%>
+    result: <%= result %>,
+<%
+    result.split('/').forEach(function(title, index){
+        if (index === 0) {
+            if (config.permalink.match('category')) {
+                link = button[0].url + 'categories/'
+            } else if (config.permalink.match('year')) {
+                link = button[0].url + 'archives/'
+            }
+        }
+        %>
+            link: <%= link %>,
+            title: <%= title %>,
+        <%
+        button[index + 1] = {title: title, url: link + title + '/'}
+        link = button[index + 1].url
+        lastindex = index
+    })
+
+for (var key in button) {
+    if (key <= lastindex) {
+%>
+    <a href="<%= button[key].url %>">
+        <%= button[key].title %>
+    </a> /
+<%
+    }
+}
+%>
