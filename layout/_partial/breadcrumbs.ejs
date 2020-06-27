@@ -1,8 +1,8 @@
 <%
     var button = [
-        { title: 'home', url: 'http://localhost:4000/blog/' }
+        { title: 'home', icon: 'fa fa-home', url: 'http://localhost:4000/blog/' }
     ]
-    var link, name
+    var link, name, icon
     var lastindex = 0
     var result = path.slice(path.indexOf(config.root)+1, path.length)
 
@@ -22,11 +22,24 @@
         if ( __(title) !== null ) {
             if ( title.match(/\d{4}/) ) { name = title + '年' }
             else if ( title.match(/\d{1,2}/) ) { name = title + '月' }
-            else { name = __(title) }
+            else {
+                name = __(title)
+                if (title === 'home') {
+                    icon = theme.icon.home
+                } else if (title === 'archives') {
+                    icon = theme.icon.archive
+                } else if (title === 'categories') {
+                    icon = theme.icon.category
+                } else if (title === 'tags') {
+                    icon = theme.icon.tag
+                } else {
+                    icon = ''
+                }
+            }
         }
         else { name = title }
 
-        button[index + 1] = {url: link + title + '/', title: name}
+        button[index + 1] = {url: link + title + '/', icon: icon, title: name}
         link = button[index + 1].url
 
         if (is_post()) { lastindex = index - 1 }
@@ -39,17 +52,11 @@
         <nav class="col-12">
             <ul class="mx-0 my-0">
                 <li>
-                    <% for (var key in button) { %>
-                        <% if (key <= lastindex) { %>
-                            <a href="<%= button[key].url %>" target="_self">
-                                <% if (key == 0) { %>
-                                    <i class="fa fa-home"></i>
-                                <% } else { %>
-                                    <i class="fa fa-folder-open"></i>
-                                    <%= button[key].title %>
-                                <% } %>
-                            </a>
-                        <% } %>
+                    <% for (key = 1; key <= lastindex; key++) { %>
+                        <a href="<%= button[key].url %>" target="_self">
+                            <i class="<%= button[key].icon %>"></i>
+                            <%= button[key].title %>　＞　
+                        </a>
                     <% } %>
                 </li>
             </ul>

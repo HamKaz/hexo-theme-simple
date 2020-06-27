@@ -44,7 +44,9 @@ widgets:
 - category
 - recent_posts
 
-# Page Type
-pagetype_index : 1
-pagetype_page: 2
-pagetype_post: 3
+# icon
+icon:
+    home: 'fa fa-home'
+    archive: 'fa fa-list-alt'
+    category: 'fa fa-folder-open'
+    tag: 'fa fa-tag'
