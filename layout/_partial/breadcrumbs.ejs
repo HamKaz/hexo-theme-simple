@@ -2,36 +2,56 @@
     var button = [
         { title: 'home', url: 'http://localhost:4000/blog/' }
     ]
-    var link
+    var link, name
     var lastindex = 0
     var result = path.slice(path.indexOf(config.root)+1, path.length)
-%>
-    result: <%= result %>,
-<%
+
     result.split('/').forEach(function(title, index){
         if (index === 0) {
-            if (config.permalink.match('category')) {
-                link = button[0].url + 'categories/'
-            } else if (config.permalink.match('year')) {
-                link = button[0].url + 'archives/'
+            if (is_post()) {
+                if (config.permalink.match('category')) {
+                    link = button[0].url + 'categories/'
+                } else if (config.permalink.match('year')) {
+                    link = button[0].url + 'archives/'
+                }
+            } else {
+                link = button[0].url
             }
         }
-        %>
-            link: <%= link %>,
-            title: <%= title %>,
-        <%
-        button[index + 1] = {title: title, url: link + title + '/'}
-        link = button[index + 1].url
-        lastindex = index
-    })
 
-for (var key in button) {
-    if (key <= lastindex) {
+        if ( __(title) !== null ) {
+            if ( title.match(/\d{4}/) ) { name = title + '年' }
+            else if ( title.match(/\d{1,2}/) ) { name = title + '月' }
+            else { name = __(title) }
+        }
+        else { name = title }
+
+        button[index + 1] = {url: link + title + '/', title: name}
+        link = button[index + 1].url
+
+        if (is_post()) { lastindex = index - 1 }
+        else { lastindex = index }
+    })
 %>
-    <a href="<%= button[key].url %>">
-        <%= button[key].title %>
-    </a> /
-<%
-    }
-}
-%>
+
+<div class="container">
+    <div class="row">
+        <nav class="col-12">
+            <ul class="mx-0 my-0">
+                <li>
+                    <% for (var key in button) { %>
+                        <% if (key <= lastindex) { %>
+                            <a href="<%= button[key].url %>" target="_self">
+                                <% if (key == 0) { %>
+                                    <i class="fa fa-home"></i>
+                                <% } else { %>
+                                    <%= button[key].title %>
+                                <% } %>
+                            </a>
+                        <% } %>
+                    <% } %>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>

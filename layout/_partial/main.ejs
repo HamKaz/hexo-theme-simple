@@ -2,7 +2,7 @@
     <% if (is_home() || is_archive()) { %>
         <!-- main for index, archive, category, tag -->
         <% if (!is_home()) { %>
-            <section class="row mx-3 my-3">
+            <section class="row mx-0 my-0">
                 <%- partial('breadcrumbs') %>
             </section>
         <% } %>
@@ -21,7 +21,7 @@
         <%- partial('pagination') %>
     <% } else { %>
         <!-- main for page, post -->
-            <section class="row mx-3 my-3">
+            <section class="row mx-0 my-0">
                 <%- partial('breadcrumbs', {item: page}) %>
             </section>
             <section class="row mx-3 my-3">
