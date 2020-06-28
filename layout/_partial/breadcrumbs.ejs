@@ -24,13 +24,17 @@
             else if ( title.match(/\d{1,2}/) ) { name = title + '月' }
             else {
                 name = __(title)
-                if (title === 'home') {
+                if (is_home()) {
                     icon = theme.icon.home
-                } else if (title === 'archives') {
+                } else if (is_archive()) {
                     icon = theme.icon.archive
-                } else if (title === 'categories') {
+                } else if (is_category()) {
                     icon = theme.icon.category
-                } else if (title === 'tags') {
+                } else if (is_tag()) {
+                    icon = theme.icon.tag
+                } else if ( is_page() && (title === 'categories')) {
+                    icon = theme.icon.category
+                } else if ( is_page() && (title === 'tags')) {
                     icon = theme.icon.tag
                 } else {
                     icon = ''
@@ -55,7 +59,7 @@
                     <% for (key = 1; key <= lastindex; key++) { %>
                         <a href="<%= button[key].url %>" target="_self">
                             <i class="<%= button[key].icon %>"></i>
-                            <%= button[key].title %>　＞　
+                            <%= button[key].title %>
                         </a>
                     <% } %>
                 </li>
