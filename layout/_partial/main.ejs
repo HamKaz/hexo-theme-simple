@@ -1,26 +1,29 @@
 <main class="card mx-2 my-2 sidebar-sticky">
     <% if (is_home() || is_archive()) { %>
-        <!-- main for index, archive, category, tag -->
         <% if (!is_home()) { %>
-            <section class="row mx-0 my-0">
-                <%- partial('breadcrumbs') %>
-            </section>
+            <div>
+                <section class="row mx-0 my-0">
+                    <%- partial('breadcrumbs') %>
+                </section>
+            </div>
         <% } %>
-        <% page.posts.forEach(function(item, index){ %>
-            <section class="row no-gutters mx-3 my-3">
-                <%- partial('parts/image', { item: item, img_jump: true }) %>
-            </section>
-            <section class="row mx-auto mx-3 my-0 px-3">
-                <%- partial('paragraph/title', { item: item, title_jump: true }) %>
-            </section>
-            <section class="row mx-auto mx-3 my-0">
-                <%- partial('paragraph/date', { item: item }) %>
-            </section>
-            <%- partial('parts/holizontal_line') %>
-        <% }); %>
+        <div>
+            <% page.posts.forEach(function(item, index){ %>
+                <section class="row no-gutters mx-3 my-3">
+                    <%- partial('parts/image', { item: item, img_jump: true }) %>
+                </section>
+                <section class="row mx-auto mx-3 my-0 px-3">
+                    <%- partial('paragraph/title', { item: item, title_jump: true }) %>
+                </section>
+                <section class="row mx-auto mx-3 my-0">
+                    <%- partial('paragraph/date', { item: item }) %>
+                </section>
+                <%- partial('parts/holizontal_line') %>
+            <% }); %>
+        </div>
         <%- partial('pagination') %>
     <% } else { %>
-        <!-- main for page, post -->
+        <div>
             <section class="row mx-0 my-0">
                 <%- partial('breadcrumbs', {item: page}) %>
             </section>
@@ -39,5 +42,6 @@
             <section class="row mx-3 my-0">
                 <%- partial('paragraph/content', { item: page }) %>
             </section>
+        </div>
     <% } %>
 </main>
