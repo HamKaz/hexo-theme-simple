@@ -38,11 +38,11 @@ disqus_shortname:
 # Sidebar
 sidebar: right
 widgets:
-- about  # aboutを追加
-- archive
-- tag
+- about
 - category
+- tag
 - recent_posts
+- archive
 
 # icon
 icon:
