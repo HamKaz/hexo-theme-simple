@@ -1,7 +1,3 @@
-<% if(img_jump == true) { %>
-    <a href="<%- config.root %><%- item.path %>">
-<% } %>
-        <img class="img-fluid cover-image img-obj-fit" src="<%- config.root %><%- item.cover_image || theme.default_cover_image %>" alt="<%- item.title || "Untitled" %>">
-<% if(img_jump == true) { %>
-    </a>
-<% } %>
+<img class="img-fluid" src="<%- config.root %><%- item.cover_image || theme.default_cover_image %>" alt="<%- item.title || "Untitled" %>">
+
+<!-- post-image img-fluid cover-image img-obj-fit -->

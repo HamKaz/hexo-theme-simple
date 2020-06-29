@@ -32,6 +32,8 @@
                     icon = theme.icon.category
                 } else if (is_tag()) {
                     icon = theme.icon.tag
+                } else if (is_post()) {
+                    icon = theme.icon.category
                 } else if ( is_page() && (title === 'categories')) {
                     icon = theme.icon.category
                 } else if ( is_page() && (title === 'tags')) {
@@ -51,19 +53,13 @@
     })
 %>
 
-<div class="container">
-    <div class="row">
-        <nav class="col-12">
-            <ul class="mx-0 my-0">
-                <li>
-                    <% for (key = 1; key <= lastindex; key++) { %>
-                        <a href="<%= button[key].url %>" target="_self">
-                            <i class="<%= button[key].icon %>"></i>
-                            <%= button[key].title %>
-                        </a>
-                    <% } %>
-                </li>
-            </ul>
-        </nav>
-    </div>
-</div>
+<ul class="mx-0 my-0">
+    <li>
+        <% for (key = 1; key <= lastindex; key++) { %>
+            <a href="<%= button[key].url %>" target="_self">
+                <i class="<%= button[key].icon %>"></i>
+                <%= button[key].title %>
+            </a>
+        <% } %>
+    </li>
+</ul>

@@ -1,3 +1,6 @@
+/* General Setting
+—————————————————————————————————————————————————————————————————————— */
+
 body {
 	font-family: 'M PLUS Rounded 1c', sans-serif;
 	font-size: 1.25rem;
@@ -5,7 +8,7 @@ body {
 }
 
 a, a:visited, a:active, a:focus {
-	color: #555;
+	color: #888;
 	background-color: transparent;
   -webkit-transition: color 0.2s ease;
   transition: color 0.2s ease;
@@ -50,6 +53,42 @@ blockquote {
 	padding: 30px;
 }
 
+.sidebar-sticky {
+/*  position: -webkit-sticky;*/
+  position: sticky;
+  top: 10px;
+}
+
+span.toc-number{
+  display: none;
+}
+
+ol, ul {
+  padding: 0;
+	position: relative;
+	list-style:none;
+	margin-bottom: 0rem;
+}
+
+ol li, ul li, ul a {
+/*	color: #2d8fdd;*/
+/*	border-left: solid 6px #2d8fdd;*/
+	font-size: 1.0rem;
+/*	background: #f1f8ff;*/
+	margin-bottom: 0rem;
+	line-height: 1.2rem;
+	padding: 0.25rem;
+	list-style:none;
+}
+
+ul li ul {
+	margin-top: 0.2rem;
+}
+
+ul li ul li {
+	margin-left: 1rem;
+}
+
 .gutter {
 	display: none;
 }
@@ -57,43 +96,6 @@ blockquote {
 .highlight {
 	background-color: #f5f5f5;
 	padding: 30px;
-}
-
-/* Forms
-—————————————————————————————————————————————————————————————————————— */
-
-form button {
-  color: #777;
-	font-size: 0.9rem;
-	background: #fff;
-  padding: 10px 15px;
-	width: 100%;
-  border: solid #ccc 2px;
-	transition: all 0.3s ease-in-out;
-  text-decoration: none;
-}
-
-form button:hover {
-	color: #000;
-	border: solid #000 2px;
-  text-decoration: none;
-}
-
-input, textarea {
-	font-size: 0.9rem;
-	letter-spacing: 0.5px;
-  border: 1px solid #ddd;
-  background: #fff;
-  padding: 15px;
-	margin: 5px 0;
-  transition: all 0.3s ease-in-out;
-  width: 100%;
-
-}
-
-input:focus, textarea:focus {
-  border-color: #777;
-  outline: none;
 }
 
 /* Title & Navigation
@@ -123,16 +125,6 @@ input:focus, textarea:focus {
 
 /* Home Page
 —————————————————————————————————————————————————————————————————————— */
-
-.image-box {
-	position: relative;
-}
-
-.image-box:before{
-	content: "";
-	display: block;
-	padding-top: 100%;
-}
 
 .post-image {
 	position:  absolute;
@@ -180,21 +172,34 @@ input:focus, textarea:focus {
 	margin: 0 auto;
 }
 
-.pagination a {
-	color: #aaa;
-}
 
-.pagination a:hover {
-	color: #333;
-}
 
 /* Post Page
 —————————————————————————————————————————————————————————————————————— */
 
-.cover-image {
-	width: 100%;
-	max-height: 500px;
-	object-fit: cover;
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-item {
+  flex-basis: 100%;
+}
+
+.image-trim {
+  position: relative;
+  overflow: hidden;
+  padding-top: 60%;
+}
+
+.image-trim img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .post-page h1 {
@@ -217,32 +222,7 @@ footer {
 
 /* custom zone
 —————————————————————————————————————————————————————————————————————— */
-.sidebar-sticky {
-/*  position: -webkit-sticky;*/
-  position: sticky;
-  top: 10px;
-}
 
-span.toc-number{
-  display: none;
-}
-
-ol, ul {
-  padding: 0;
-	position: relative;
-	list-style:none;
-}
-
-ol li, ul li, ul a {
-/*	color: #2d8fdd;
-	border-left: solid 6px #2d8fdd;*/
-	font-size: 1.0rem;
-/*	background: #f1f8ff;*/
-/*	margin-bottom: 3px;*/
-	line-height: 1.2rem;
-	padding: 0.25rem;
-	list-style:none;
-}
 
 /* 未実装 */
 .img-obj-fit img {
