@@ -1,7 +1,10 @@
 ## Kick-off: blog_theme_simpler
-This is for hexo.
+This is one of hexo themes.
 
-Go to Demo Page : https://hamkaz.github.io
+Go to Demo : https://hamkaz.github.io
+Go to Hands On : https://github.com/HamKaz/blogtheme-simpler/HANDS-ON.md
+Go to FAQ : https://github.com/HamKaz/blogtheme-simpler/FAQ.md)
+Go to General Info : https://github.com/HamKaz/blogtheme-simpler/INFO.md)
 
 ## Features and Attributes
 1. Resposive Framework
@@ -11,14 +14,6 @@ Go to Demo Page : https://hamkaz.github.io
 5. Eye-catchable Picture Allocation
 6. Icon-Selectable Breadcrumbs
 7. Iconable SNS Button 
-
-## Hands On
-1. clone and run
-check ![README_hands_on.md](https://github.com/HamKaz/blogtheme-simpler/README_hands_on.md)
-
-## FAQ
-1. go to FAQ page
-check ![README_FAQ.md](https://github.com/HamKaz/blogtheme-simpler/README_FAQ.md)
 
 ## Details
 ### 1. Responsive Framework
@@ -50,7 +45,5 @@ So far, it shined Colorful and Photogenic pictures in this Index Page.
 
 
 ## Closing
-Thanks for your attention on this hexo theme.
-It can fork and be able to custom.
+Thanks for your attention to this repository.
 
-If you want to contact to me, please send direct message to my SNS account.
