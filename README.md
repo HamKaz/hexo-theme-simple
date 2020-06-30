@@ -1,16 +1,21 @@
-# blog_theme_simpler, before Kick-off
+# blog_theme_simpler
+## Kick-off
 This is for hexo.
 
 Go to Demo Page : https://hamkaz.github.io
 
 ## Features and Attributes
 1. Resposive Framework
-6. Easy-Recognizable Card Arrangement
-5. Config-Adjustable Top 3 Navigation
-3. Soft-and-Light Typography Impression
-2. Eye-catchable Picture Allocation
-4. Icon-Selectable Breadcrumbs
+2. Easy-Recognizable Card Arrangement
+3. Config-Adjustable Top 3 Navigation
+4. Soft-and-Light Typography Impression
+5. Eye-catchable Picture Allocation
+6. Icon-Selectable Breadcrumbs
 7. Iconable SNS Button 
+
+## Hands On
+clone and run
+in detail, check ![README_hands_on.md](https://github.com/HamKaz/blogtheme-simpler/README_hands_on.md)
 
 ## Details
 ### 1. Responsive Framework
@@ -19,23 +24,23 @@ As of Basic Allocation, it is used 3 layers with `container`, `row`, and `col`.
 As of Allocation, it has basecally devided each of one by three with landscape direction (it means 1 row has 3 columns).
 As of Each Allocation, it has covered by `Bootstrap's card` or `HTML div`, and includes one partial function (it means _partial directory, and lower).
 
-### 6. Easy-Recognizable Card Arrangement
+### 2. Easy-Recognizable Card Arrangement
 
 
-### 5. Config-Adjustable Top 3 Navigation
+### 3. Config-Adjustable Top 3 Navigation
 
 
-### 3. Soft-and-Light Typography Impression
+### 4. Soft-and-Light Typography Impression
 Letter color is faded, once it moused over some letters, it is abled to strengthed from fade color to black. 
 This aims Sentense-based and Picture-based Theme for blogger and affiriater.
 
-### 2. Eye-catchable Picture Allocation
+### 5. Eye-catchable Picture Allocation
 In order to get strong impression of contents which you produce, it adopted tile-allocated design.
 As of each picture which is used by Index page, it used ratio-keepable Picture.
 When it used different ratio of landscape-to-portrat image, it has kept same frame ratio.
 So far, it shined Colorful and Photogenic pictures in this Index Page.
 
-### 4. Icon-Selectable Breadcrumbs
+### 6. Icon-Selectable Breadcrumbs
 
 
 ### 7. Iconable SNS Button 
