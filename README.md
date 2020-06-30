@@ -1,7 +1,7 @@
 ## Kick-off: blog_theme_simpler
 This is one of themes for Hexo, Static HTML Generator.
 
-Go to Demo : https://github.io/HamKaz
+Go to Demo : https://HamKaz.github.io
 
 Go to source of Demo page : https://github.com/HamKaz/blog-source-dummy
 
