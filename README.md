@@ -1,4 +1,4 @@
-## Kick-off: blog_theme_simpler
+# Hexo-theme-simple
 This is one of themes for Hexo, Static HTML Generator.
 
 Go to Demo : https://HamKaz.github.io
