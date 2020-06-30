@@ -1,21 +1,22 @@
 <%
+    var url = config.url
     var button = [
-        { title: 'home', icon: 'fa fa-home', url: 'http://localhost:4000/blog/' }
+        { title: 'home', icon: 'fa fa-home', url: url }
     ]
     var link, name, icon
     var lastindex = 0
-    var result = path.slice(path.indexOf(config.root)+1, path.length)
+    var result = path.slice(path.indexOf(config.url)+1, path.length)
 
     result.split('/').forEach(function(title, index){
         if (index === 0) {
             if (is_post()) {
                 if (config.permalink.match('category')) {
-                    link = button[0].url + 'categories/'
+                    link = button[0].url + '/categories/'
                 } else if (config.permalink.match('year')) {
-                    link = button[0].url + 'archives/'
+                    link = button[0].url + '/archives/'
                 }
             } else {
-                link = button[0].url
+                link = button[0].url + '/'
             }
         }
 
@@ -55,7 +56,7 @@
 
 <ul class="mx-0 my-0">
     <li>
-        <% for (key = 1; key <= lastindex; key++) { %>
+        <% for (key = 0; key <= lastindex; key++) { %>
             <a href="<%= button[key].url %>" target="_self">
                 <i class="<%= button[key].icon %>"></i>
                 <%= button[key].title %>
