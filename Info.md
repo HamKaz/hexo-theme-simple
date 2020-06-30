@@ -1,4 +1,4 @@
-# Any Info
+# Info
 This is a hexo theme, which I firstly developed.
 
 ## General
