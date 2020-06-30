@@ -2,9 +2,12 @@
 This is one of hexo themes.
 
 Go to Demo : https://hamkaz.github.io
+
 Go to Hands On : https://github.com/HamKaz/blogtheme-simpler/HANDS-ON.md
-Go to FAQ : https://github.com/HamKaz/blogtheme-simpler/FAQ.md)
-Go to General Info : https://github.com/HamKaz/blogtheme-simpler/INFO.md)
+
+Go to FAQ : https://github.com/HamKaz/blogtheme-simpler/FAQ.md
+
+Go to General Info : https://github.com/HamKaz/blogtheme-simpler/INFO.md
 
 ## Features and Attributes
 1. Resposive Framework
