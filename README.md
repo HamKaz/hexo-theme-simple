@@ -1,5 +1,5 @@
-# First of All
-This theme is for hexo, named to blog_theme_simpler.
+# blog_theme_simpler, before Kick-off
+This is for hexo.
 
 Go to Demo Page : https://hamkaz.github.io
 
