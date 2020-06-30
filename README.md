@@ -14,8 +14,12 @@ Go to Demo Page : https://hamkaz.github.io
 7. Iconable SNS Button 
 
 ## Hands On
-clone and run
-in detail, check ![README_hands_on.md](https://github.com/HamKaz/blogtheme-simpler/README_hands_on.md)
+1. clone and run
+check ![README_hands_on.md](https://github.com/HamKaz/blogtheme-simpler/README_hands_on.md)
+
+## FAQ
+1. go to FAQ page
+check ![README_FAQ.md](https://github.com/HamKaz/blogtheme-simpler/README_FAQ.md)
 
 ## Details
 ### 1. Responsive Framework
@@ -46,30 +50,8 @@ So far, it shined Colorful and Photogenic pictures in this Index Page.
 ### 7. Iconable SNS Button 
 
 
-## Other Info
-This is a hexo theme of my first developing.
+## Closing
+Thanks for your attention on this hexo theme.
+It can fork and be able to custom.
 
-### General: hexo generation rules
-It followed Layout Generation Rule.
-
-And then, it generated a page by each rule.
-e.g. Index, Page, Post, Archive (no usage of category.ejs or tag.ejs).
-
-So that it includes category and tag generation rules in archive.ejs itself. 
-
-### Requirement (Base Knowledge)
-Hexo
-EJS
-Bootstrap4 and CSS (CDN default)
-GoogleFont (CDN default)
-FontAwesome (CDN default)
-
-### Developing Circumstance
-Linux Debian 10.02, with Cinamon
-Chrome for Linux
-Atom for Linux
-
-### Verification
-Chrome, Linux Debian 10.02
-Safari, Mac OS X 10.14
-Mobile Safari, Mac OS X 10.14
+If you want to contact to me, please send direct message to my SNS account.
