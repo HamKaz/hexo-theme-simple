@@ -9,7 +9,7 @@ It firstly followed rules of Layout Generation.
 And then, it generated a page by each rule.
 e.g. Index, Page, Post, Archive (no usage of category.ejs or tag.ejs).
 
-So that it includes category and tag generation function in archive.ejs. 
+So that it includes category and tag generation rules in archive.ejs itself. 
 
 ## Feature
 1. Resposive Framework
