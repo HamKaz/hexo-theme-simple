@@ -1,41 +1,61 @@
 # First of All
-This repository is named to blog_theme_simpler.
-This is one of contents-direct and recognizable theme.
+This theme is for hexo, named to blog_theme_simpler.
 
 Go to Demo Page : https://hamkaz.github.io
 
 # Feature
-1. Resposive
-2. Eye-catchable Picture Framework
-3. Readable and Soft-imaged Typography
-4. Icon-selectable Breadcrumbs
-5. config adjustable top navigation
-6. Easy-recognizable design
-7. SNS friendly
+1. Resposive Framework
+2. Eye-catchable Picture Allocation
+3. Readable and Soft-and-Light Typography
+4. Icon-Selectable Breadcrumbs
+5. Config-Adjustable Top 3 Navigation
+6. Easy-Recognizable Card Arrangement
+7. Iconable SNS Button 
 
+### 0. allow hexo generation rules
+It followed Layout rules, and Page Generation Rule (In order, Index, Page, Post, Archive).
 
+### 1. Responsive Framework
+This is a Responsive, Wrap-and-Roundable, and Collapse-able by using Bootstrap4.
+As of Basic Allocation, it is used 3 layers with `container`, `row`, and `col`.
+As of Allocation, it has basecally devided each of one by three with landscape direction (it means 1 row has 3 columns).
+As of Each Allocation, it has covered by `Bootstrap's card` or `HTML div`, and includes one partial function (it means _partial directory, and lower).
+
+### 2. Eye-catchable Picture Allocation
+In order to get strong impression of contents which you produce, it adopted tile-allocated design.
+As of each picture which is used by Index page, it used ratio-keepable Picture.
+When it used different ratio of landscape-to-portrat image, it has kept same frame ratio.
+So far, it shined Colorful and Photogenic pictures in this Index Page.
+
+### 3. Readable and Soft-and-Light Typography
+Letter color is faded, once it moused over some letters, it is abled to strengthed from fade color to black. 
 This aims Sentense-based and Picture-based Theme for blogger and affiriater.
-It's so simple that it derived Colorful and Photogenic Picture
 
-### 1. Responsive
-It realized Responsive design by using Bootstrap4.
-It basecally devided one by three within landscape widths(it means columns), and 
-It has basecally allocated by Bootstrap's card style.
+### 4. Icon-Selectable Breadcrumbs
 
-### 2. Eye-catchable Picture Framework
-Ratio-keepable Picture
+### 5. Config-Adjustable Top 3 Navigation
 
-### 3. Readable and Soft-imaged Typography
-.and color-few-used 
+### 6. Easy-Recognizable Card Arrangement
 
-### 4. Icon-selectable Breadcrumbs
-
-### 5. Easy-recognizable design
-
-### 6. SNS friendly
-
-###
+### 7. Iconable SNS Button 
 
 
 #### Other Info
-This is my first released hexo theme.
+This is a hexo theme of my first developing.
+
+##### Requirement (Base Knowledge)
+Hexo
+EJS
+Bootstrap4 and CSS (CDN default)
+GoogleFont (CDN default)
+FontAwesome (CDN default)
+
+##### Developing Circumstance
+Linux Debian 10.02, with Cinamon
+Chrome for Linux
+Atom for Linux
+
+##### Verification
+Chrome, Linux Debian 10.02
+Safari, Mac OS X 10.14
+Mobile Safari, Mac OS X 10.14
