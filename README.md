@@ -3,7 +3,9 @@ This is one of hexo themes.
 
 Go to Demo : https://hamkaz.github.io
 
-Go to Hands On : https://github.com/HamKaz/blogtheme-simpler/HANDS-ON.md
+Go to source of Demo page : https://github.com/HamKaz/blog-source
+
+Go to Hands On : https://github.com/HamKaz/blog-theme-simpler/HANDS-ON.md
 
 Go to FAQ : https://github.com/HamKaz/blogtheme-simpler/FAQ.md
 
