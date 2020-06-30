@@ -12,7 +12,7 @@ Go to FAQ : https://github.com/HamKaz/blog_theme_simpler/blob/master/FAQ.md
 Go to General Info : https://github.com/HamKaz/blog_theme_simpler/blob/master/INFO.md
 
 ## Features and Attributes
-1. Resposive Framework
+1. Cream-color-based Resposive Frame
 2. Easy-Recognizable Card Arrangement
 3. Config-Adjustable Top 3 Navigation
 4. Soft-and-Light Typography Impression
@@ -21,10 +21,13 @@ Go to General Info : https://github.com/HamKaz/blog_theme_simpler/blob/master/IN
 7. Iconable SNS Button 
 
 ## Details
-### 1. Responsive Framework
+### 1. Cream-color-based Resposive Frame
 This theme has a Responsive, Wrap-and-Roundable, and Collapse-able features by using Bootstrap4.
+
 As of Basic Allocation, it is used 3 layers with `container`, `row`, and `col`.
+
 As of Allocation, it has basecally devided each of one by three with landscape direction (it means 1 row has 3 columns).
+
 As of Each Allocation, it has covered by `Bootstrap's card` or `HTML div`, and includes one partial function (it means _partial directory, and lower).
 
 ### 2. Easy-Recognizable Card Arrangement
