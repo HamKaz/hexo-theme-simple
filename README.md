@@ -3,14 +3,6 @@ This theme is for hexo, named to blog_theme_simpler.
 
 Go to Demo Page : https://hamkaz.github.io
 
-## General: allow hexo generation rules
-It firstly followed rules of Layout Generation.
-
-And then, it generated a page by each rule.
-e.g. Index, Page, Post, Archive (no usage of category.ejs or tag.ejs).
-
-So that it includes category and tag generation rules in archive.ejs itself. 
-
 ## Feature
 1. Resposive Framework
 2. Eye-catchable Picture Allocation
@@ -48,6 +40,14 @@ This aims Sentense-based and Picture-based Theme for blogger and affiriater.
 
 #### Other Info
 This is a hexo theme of my first developing.
+
+#### General: allow hexo generation rules
+It followed Layout Generation Rule.
+
+And then, it generated a page by each rule.
+e.g. Index, Page, Post, Archive (no usage of category.ejs or tag.ejs).
+
+So that it includes category and tag generation rules in archive.ejs itself. 
 
 ##### Requirement (Base Knowledge)
 Hexo
