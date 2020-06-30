@@ -6,7 +6,7 @@ Go to Demo Page : https://hamkaz.github.io
 ## Feature
 1. Resposive Framework
 2. Eye-catchable Picture Allocation
-3. Readable and Soft-and-Light Typography
+3. Soft-and-Light Typography Impression
 4. Icon-Selectable Breadcrumbs
 5. Config-Adjustable Top 3 Navigation
 6. Easy-Recognizable Card Arrangement
@@ -25,7 +25,7 @@ As of each picture which is used by Index page, it used ratio-keepable Picture.
 When it used different ratio of landscape-to-portrat image, it has kept same frame ratio.
 So far, it shined Colorful and Photogenic pictures in this Index Page.
 
-### 3. Readable and Soft-and-Light Typography
+### 3. Soft-and-Light Typography Impression
 Letter color is faded, once it moused over some letters, it is abled to strengthed from fade color to black. 
 This aims Sentense-based and Picture-based Theme for blogger and affiriater.
 
