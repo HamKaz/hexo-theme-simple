@@ -4,7 +4,8 @@ This theme is for hexo, named to blog_theme_simpler.
 Go to Demo Page : https://hamkaz.github.io
 
 ## General: allow hexo generation rules
-It followed rules of Layout Generation, and generated a page by each rule.
+It firstly followed rules of Layout Generation
+And then, it generated a page by each rule.
 e.g. Index, Page, Post, Archive (no usage of category.ejs or tag.ejs).
 
 ## Feature
