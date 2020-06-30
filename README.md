@@ -1,5 +1,4 @@
-# blog_theme_simpler
-## Kick-off
+## blog_theme_simpler: Kick-off
 This is for hexo.
 
 Go to Demo Page : https://hamkaz.github.io
