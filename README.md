@@ -3,7 +3,7 @@ This theme is for hexo, named to blog_theme_simpler.
 
 Go to Demo Page : https://hamkaz.github.io
 
-## Feature
+## Features, Aspects, and Attributes
 1. Resposive Framework
 2. Eye-catchable Picture Allocation
 3. Soft-and-Light Typography Impression
