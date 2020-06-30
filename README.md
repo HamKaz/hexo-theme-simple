@@ -1,5 +1,5 @@
 ## Kick-off: blog_theme_simpler
-This is one of themes for Static HTML Generator, Hexo.
+This is one of themes for Hexo, Static HTML Generator.
 
 Go to Demo : https://hamkaz.github.io
 
