@@ -5,11 +5,11 @@ Go to Demo : https://github.io/HamKaz
 
 Go to source of Demo page : https://github.com/HamKaz/blog-source-dummy
 
-Go to Hands On : https://github.com/HamKaz/blog_theme_simpler/HANDS-ON.md
+Go to Hands On : https://github.com/HamKaz/blog_theme_simpler/blob/master/HANDS-ON.md
 
-Go to FAQ : https://github.com/HamKaz/blog_theme_simpler/FAQ.md
+Go to FAQ : https://github.com/HamKaz/blog_theme_simpler/blob/master/FAQ.md
 
-Go to General Info : https://github.com/HamKaz/blog_theme_simpler/INFO.md
+Go to General Info : https://github.com/HamKaz/blog_theme_simpler/blob/master/INFO.md
 
 ## Features and Attributes
 1. Resposive Framework
