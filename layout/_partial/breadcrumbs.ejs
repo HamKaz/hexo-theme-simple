@@ -21,8 +21,8 @@
         }
 
         if ( __(title) !== null ) {
-            if ( title.match(/\d{4}/) ) { name = title + '年' }
-            else if ( title.match(/\d{1,2}/) ) { name = title + '月' }
+            if ( title.match(/\d{4}/) ) { name = title }
+            else if ( title.match(/\d{1,2}/) ) { name = title }
             else {
                 name = __(title)
                 if (is_home()) {
