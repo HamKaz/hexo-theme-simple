@@ -1,17 +1,29 @@
-/* General Setting
+/* General
 —————————————————————————————————————————————————————————————————————— */
-
 body {
 	font-family: 'M PLUS Rounded 1c', sans-serif;
 	font-size: 1.25rem;
 	color: #333;
 }
 
+footer {
+	border-top: 1px solid #eee;
+}
+
+/* General - Inline Factor
+—————————————————————————————————————————————————————————————————————— */
+h1 {	font-size: 1.4rem;	}
+h2 {	font-size: 1.3rem;	}
+h3 {	font-size: 1.2rem;	}
+h4 {	font-size: 1.1rem;	}
+h5 {	font-size: 1.0rem;	}
+h6 {	font-size: 0.9rem;	}
+
 a, a:visited, a:active, a:focus {
 	color: #888;
 	background-color: transparent;
-  -webkit-transition: color 0.2s ease;
-  transition: color 0.2s ease;
+	-webkit-transition: color 0.2s ease;
+	transition: color 0.2s ease;
 }
 
 a:focus {
@@ -19,7 +31,7 @@ a:focus {
 }
 
 a:hover {
-  color: #000;
+	color: #000;
 }
 
 a, a:link, a:visited, a:focus, a:hover, a:active {
@@ -40,29 +52,12 @@ p a:hover {
 	border-bottom: 1px solid #000;
 }
 
-h1 {	font-size: 1.4rem;	}
-h2 {	font-size: 1.3rem;	}
-h3 {	font-size: 1.2rem;	}
-h4 {	font-size: 1.1rem;	}
-h5 {	font-size: 1.0rem;	}
-h6 {	font-size: 0.9rem;	}
-
-blockquote {
-	background-color: #f5f5f5;
-	border-left: 3px solid #555;
-	padding: 30px;
-}
-
-.sidebar-sticky {
-/*  position: -webkit-sticky;*/
-  position: sticky;
-  top: 10px;
-}
-
 span.toc-number{
   display: none;
 }
 
+/* General - list
+—————————————————————————————————————————————————————————————————————— */
 ol, ul {
   padding: 0;
 	position: relative;
@@ -71,10 +66,7 @@ ol, ul {
 }
 
 ol li, ul li, ul a {
-/*	color: #2d8fdd;*/
-/*	border-left: solid 6px #2d8fdd;*/
 	font-size: 1.0rem;
-/*	background: #f1f8ff;*/
 	margin-bottom: 0rem;
 	line-height: 1.2rem;
 	padding: 0.25rem;
@@ -89,18 +81,15 @@ ul li ul li {
 	margin-left: 1rem;
 }
 
-.gutter {
-	display: none;
-}
-
-.highlight {
-	background-color: #f5f5f5;
-	padding: 30px;
-}
-
-/* Title & Navigation
+/* Layout Control
 —————————————————————————————————————————————————————————————————————— */
+.sidebar-sticky {
+  position: sticky;
+  top: 10px;
+}
 
+/* Title & Header
+—————————————————————————————————————————————————————————————————————— */
 .title {
 	color: #000;
 	font-size: 1.8rem;
@@ -123,39 +112,8 @@ ul li ul li {
 	right: 0rem;
 }
 
-/* Home Page
+/* Body
 —————————————————————————————————————————————————————————————————————— */
-
-.post-image {
-	position:  absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-}
-
-.post-image img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
-.post-image img:hover {
-	opacity: 0.8;
-  filter: alpha(opacity=80);
-}
-
-.post-details {
-	font-size: 1.5rem;
-}
-
-.post-details hr {
-	border-color: #999;
-	width: 10%;
-	margin-top: 10px;
-	margin-bottom: 0px;
-}
-
 .date {
 	color: #666;
 	font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -165,18 +123,12 @@ ul li ul li {
 	letter-spacing: 2px;
 }
 
-/* Pagination
-—————————————————————————————————————————————————————————————————————— */
-
 .pagination {
 	margin: 0 auto;
 }
 
-
-
-/* Post Page
+/* Figure - Image
 —————————————————————————————————————————————————————————————————————— */
-
 .flex {
   display: flex;
   justify-content: space-between;
@@ -200,31 +152,4 @@ ul li ul li {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.post-page h1 {
-	text-align: center;
-}
-
-.post-page hr {
-	border-color: #999;
-	width: 5%;
-	margin-top: 20px;
-	margin-bottom: 10px;
-}
-
-/* Footer
-—————————————————————————————————————————————————————————————————————— */
-
-footer {
-	border-top: 1px solid #eee;
-}
-
-/* custom zone
-—————————————————————————————————————————————————————————————————————— */
-
-
-/* 未実装 */
-.img-obj-fit img {
-	object-fit: cover;
 }
