@@ -4,10 +4,10 @@
     </div>
 </div>
 <div class="row mx-auto mx-3 my-0">
-    <%- partial('_partial/paragraph/title', { item: page, flag: 'post' }) %>
+    <%- partial('_partial/parts/title', { item: page, flag: 'post' }) %>
 </div>
 <div class="row mx-auto mx-3 mt-2 mb-0">
-    <%- partial('_partial/paragraph/date', { item: page, flag: 'post'  }) %>
+    <%- partial('_partial/parts/date', { item: page, flag: 'post'  }) %>
 </div>
 <nav class="row mx-auto mx-3 mt-2 mb-0">
     <%- partial('_partial/parts/breadcrumbs') %>
@@ -15,4 +15,4 @@
 
 <%- partial('_partial/parts/holizontal_line') %>
 
-<%- partial('_partial/paragraph/content', { item: page }) %>
+<%- partial('_partial/parts/content', { item: page }) %>

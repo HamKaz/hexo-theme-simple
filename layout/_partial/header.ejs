@@ -1,18 +1,3 @@
-<%
-var top_url = 'http://localhost:4000/blog'
-if (!config.permalink.indexOf('category') === -1) {
-    var long_url = top_url + 'categories'
-} else {
-    if (is_archive()) {
-        var long_url = top_url
-    } else {
-        var long_url = top_url
-    }
-}
-var under_url = ''
-%>
-
-<!-- Header -->
 <div class="container">
     <header class="navbar navbar-light pt-3">
         <a class="navbar-brand navbar-toggleable-sm" href="<%- config.root %>">

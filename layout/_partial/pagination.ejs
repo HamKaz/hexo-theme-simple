@@ -1,17 +1,17 @@
 <!-- pagination -->
 <div class="mx-auto mt-0 mb-3">
-  <% if(page.prev || page.next) { %>
-    <div class="pagination mx-auto my-2">
-      <% if(page.prev) { %>
-        <span class="previous mr-1">
-          <%- partial('/link/prev') %>
-        </span>
-      <% } %>
-      <% if(page.next) { %>
-        <span class="next ml-1">
-          <%- partial('/link/next') %>
-        </span>
-      <% } %>
-    </div>
-  <% } %>
+    <% if(page.prev || page.next) { %>
+        <div class="pagination mx-auto my-2">
+            <% if(page.prev) { %>
+                <span class="h6 previous mr-1">
+                    <%- partial('_partial/parts/prev') %>
+                </span>
+            <% } %>
+            <% if(page.next) { %>
+                <span class="h5 next ml-1">
+                    <%- partial('_partial/parts/next') %>
+                </span>
+            <% } %>
+        </div>
+    <% } %>
 </div>

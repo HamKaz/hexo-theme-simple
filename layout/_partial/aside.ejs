@@ -1,14 +1,14 @@
 <aside class="card mx-2 my-2 sidebar-sticky">
     <% if (is_home() || is_page() || is_tag() || is_category() || is_archive()) { %>
         <% theme.widgets.forEach(function(widget){ %>
-            <%- partial('_widget/' + widget, { item: page }) %>
-            <%- partial('parts/holizontal_line') %>
+            <%- partial('_partial/parts/widget', { item: page, widget: widget }) %>
+            <%- partial('_partial/parts/holizontal_line') %>
         <% }) %>
     <% } else if (is_post()){ %>
-        <%- partial('_widget/toc', { item: page }) %>
-        <%- partial('parts/holizontal_line') %>
+        <%- partial('_partial/parts/toc', { item: page }) %>
+        <%- partial('_partial/parts/holizontal_line') %>
     <% } %>
-    <div class="col-12 text-center mb-3">
+    <div class="h6 col-12 text-center mb-3">
         <a href="#">
             <i class="fa fa-long-arrow-up mr-2"></i><%= __('top') %>
         </a>

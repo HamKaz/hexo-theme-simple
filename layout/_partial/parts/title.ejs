@@ -1,0 +1,23 @@
+<%
+    var isCategoryIndex = (page.type === 'categories' || page.type === 'category') && flag === 'page';
+    var isTagIndex = (page.type === 'tags' || page.type === 'tag') && flag === 'page';
+    var isAnchor = flag === 'nav' || flag === 'archive' || isCategoryIndex || isTagIndex;
+    var isIndexAnchor = flag === 'index';
+    var isPP = flag === 'post' || flag === 'page';
+%>
+
+<% if (isAnchor) { %>
+    <a class="h5 mx-3 my-0 px-0 py-0" href="<%- config.root %><%- item.path %>">
+        <%- item.title || "Untitled" %>
+    </a>
+<% } else if (isIndexAnchor) { %>
+    <a class="mx-0 my-0" href="<%- config.root %><%- item.path %>">
+        <p class="h5 text-center text-md-left mx-0 mt-2 mb-0">
+            <%- item.title || "Untitled" %>
+        </p>
+    </a>
+<% } else if (isPP) { %>
+    <p class="h4 text-center text-md-left mx-0 mt-2 mb-0">
+        <%- item.title || "Untitled" %>
+    </p>
+<% } %>
