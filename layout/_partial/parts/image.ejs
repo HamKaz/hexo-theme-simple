@@ -1,3 +1,11 @@
-<img class="img-fluid" src="<%- config.root %><%- item.cover_image || theme.default_cover_image %>" alt="<%- item.title || "Untitled" %>">
-
-<!-- post-image img-fluid cover-image img-obj-fit -->
+<div class="flex">
+    <div class="flex-item">
+        <figure class="image-trim">
+            <% if (flag === 'about') { %>
+                <img class="h-100" src="<%- config.root %><%- theme.author_icon || theme.default_cover_image %>" alt="<%- item.title || "Untitled" %>">
+            <% } else if ((flag === 'archive') || (flag === 'index') || (flag === 'post') || (flag === 'page')) { %>
+                <img class="h-100" src="<%- config.root %><%- item.cover_image || theme.default_cover_image %>" alt="<%- item.title || "Untitled" %>">
+            <% } %>
+        </figure>
+    </div>
+</div>

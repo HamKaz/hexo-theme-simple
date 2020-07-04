@@ -1,9 +1,15 @@
-<% if(title_jump === true) { %>
-  <a class="title" href="<%- config.root %><%- item.path %>">
-<% } %>
-<p class="mx-3 my-0">
-  <%- item.title || "Untitled" %>
-</p>
-<% if(title_jump === true) { %>
-  </a>
+<% if(flag === 'nav') { %>
+    <a class="h4 mx-0 my-0" href="<%- config.root %><%- item.path %>">
+        <%- item.title || "Untitled" %>
+    </a>
+<% } else if (flag === 'index') { %>
+    <a class="mx-0 my-0" href="<%- config.root %><%- item.path %>">
+        <p class="h4 text-center text-md-left mx-0 mt-2 mb-0">
+            <%- item.title || "Untitled" %>
+        </p>
+    </a>
+<% } else if ((flag === 'archive') || (flag === 'post') || (flag === 'page')) { %>
+    <p class="h4 text-center text-md-left mx-0 mt-2 mb-0">
+        <%- item.title || "Untitled" %>
+    </p>
 <% } %>

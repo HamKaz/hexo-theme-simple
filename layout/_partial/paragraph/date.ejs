@@ -1,3 +1,9 @@
-<p class="date mx-3 my-0">
-  <%= item.date.format(config.date_format) %>
-</p>
+<% if (flag === 'index') { %>
+    <p class="date text-center text-md-left mt-2 mb-0">
+        <%= item.date.format(config.date_format) %>
+    </p>
+<% } else if ((flag === 'page') || (flag === 'post') || (flag === 'archive')) { %>
+    <p class="date mx-3 my-0">
+        <%= item.date.format(config.date_format) %>
+    </p>
+<% } %>

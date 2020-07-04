@@ -1,17 +1,17 @@
 <!-- pagination -->
-<div class="mx-2 my-2 mx-auto">
+<div class="mx-auto mt-0 mb-3">
   <% if(page.prev || page.next) { %>
-    <section class="pagination my-2">
+    <div class="pagination mx-auto my-2">
       <% if(page.prev) { %>
-        <span class="previous mr-5">
+        <span class="previous mr-1">
           <%- partial('/link/prev') %>
         </span>
       <% } %>
       <% if(page.next) { %>
-        <span class="next ml-5">
+        <span class="next ml-1">
           <%- partial('/link/next') %>
         </span>
       <% } %>
-    </section>
+    </div>
   <% } %>
 </div>
