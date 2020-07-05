@@ -7,11 +7,15 @@
                         <%- partial('_partial/parts/image', { item: item, flag: 'nav' }) %>
                     </div>
                 </div>
-                <div class="row mx-auto mx-3 my-0">
+                <div class="row mx-auto mx-3 mt-2 mb-0">
                     <%- partial('_partial/parts/title', { item: item, flag: 'nav' }) %>
                 </div>
                 <div class="row mx-auto mx-3 my-3">
-                    <%- partial('_partial/parts/read_more', { item: item }) %>
+                    <a href="<%- config.root %><%- item.path %>">
+                        <button type="button" class="btn btn-primary btn-sm" href="<%- config.root %><%- item.path %>" data_but="btn-xs">
+                            <%= __('read_more') %>
+                        </button>
+                    </a>
                 </div>
             </nav>
         </div>

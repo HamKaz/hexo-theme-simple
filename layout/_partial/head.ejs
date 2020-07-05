@@ -1,3 +1,9 @@
+<%
+    var title = [];
+    if (page.title) title.push(page.title);
+    title.push(config.title);
+%>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +13,6 @@
         <link rel="icon" href="<%- config.root %><%- theme.favicon_url %>" type="image/x-icon" />
     <% } %>
 
-    <%
-        var title = [];
-        if (page.title) title.push(page.title);
-        title.push(config.title);
-    %>
     <title><%= title.join(' - ') %></title>
 
     <% if (page.description){ %>

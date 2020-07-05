@@ -7,7 +7,7 @@
 %>
 
 <% if (isAnchor) { %>
-    <a class="h5 mx-3 my-0 px-0 py-0" href="<%- config.root %><%- item.path %>">
+    <a class="h5 mx-3 mt-2 mb-0 px-0 py-0" href="<%- config.root %><%- item.path %>">
         <%- item.title || "Untitled" %>
     </a>
 <% } else if (isIndexAnchor) { %>
@@ -17,7 +17,7 @@
         </p>
     </a>
 <% } else if (isPP) { %>
-    <p class="h4 text-center text-md-left mx-0 mt-2 mb-0">
+    <p class="h4 text-center text-md-left mx-0 mt-3 mb-0">
         <%- item.title || "Untitled" %>
     </p>
 <% } %>

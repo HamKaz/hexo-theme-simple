@@ -66,9 +66,9 @@ ol, ul {
 }
 
 ol li, ul li, ul a {
-	font-size: 1.0rem;
+	font-size: 1.2rem;
 	margin-bottom: 0rem;
-	line-height: 1.2rem;
+	line-height: 1.4rem;
 	padding: 0.25rem;
 	list-style:none;
 }

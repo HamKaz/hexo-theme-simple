@@ -1,4 +1,6 @@
 <aside class="card mx-2 my-2 sidebar-sticky">
+    <div class="row mx-3 mt-3 mb-0">
+    </div>
     <% if (is_home() || is_page() || is_tag() || is_category() || is_archive()) { %>
         <% theme.widgets.forEach(function(widget){ %>
             <%- partial('_partial/parts/widget', { item: page, widget: widget }) %>

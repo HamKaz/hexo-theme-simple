@@ -1,11 +1,11 @@
 <%
-    var url = config.url
+    var url = config.root + item.path
     var button = [
-        { title: 'home', icon: 'fa fa-home', url: url }
+        { title: 'home', icon: 'fa fa-home', url: config.url }
     ]
     var link, name, icon
     var lastindex = 0
-    var result = path.slice(path.indexOf(config.url)+1, path.length)
+    var result = path.slice(path.indexOf(url)+1, path.length)
 
     result.split('/').forEach(function(title, index){
         if (index === 0) {
