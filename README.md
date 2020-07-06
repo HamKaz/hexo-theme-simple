@@ -5,7 +5,7 @@ Go to Demo : https://HamKaz.github.io
 
 Go to source of Demo page : https://github.com/HamKaz/blog-source-dummy
 
-Go to Hands On : https://github.com/HamKaz/blog_theme_simpler/blob/master/HANDS-ON.md
+Go to Hands-on : https://github.com/HamKaz/blog_theme_simpler/blob/master/HANDS-ON.md
 
 Go to FAQ : https://github.com/HamKaz/blog_theme_simpler/blob/master/FAQ.md
 
