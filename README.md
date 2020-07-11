@@ -1,18 +1,13 @@
 # Hexo-theme-simple
-This is one of themes for Hexo, Static HTML Generator.
+This is a theme of Static HTML Generator Hexo.
 
-Go to Demo : https://HamKaz.github.io
+Demo : https://hamkaz.github.io/sample-page
 
-Go to source of Demo page : https://github.com/HamKaz/blog-source-dummy
 
-Go to Hands-on : https://github.com/HamKaz/blog_theme_simpler/blob/master/HANDS-ON.md
-
-Go to FAQ : https://github.com/HamKaz/blog_theme_simpler/blob/master/FAQ.md
-
-Go to General Info : https://github.com/HamKaz/blog_theme_simpler/blob/master/INFO.md
 
 ## Features and Attributes
-1. Cream-color-based Resposive Frame
+
+1. White-color-based Resposive Frame
 2. Easy-Recognizable Card Arrangement
 3. Config-Adjustable Top 3 Navigation
 4. Soft-and-Light Typography Impression
@@ -20,38 +15,63 @@ Go to General Info : https://github.com/HamKaz/blog_theme_simpler/blob/master/IN
 6. Icon-Selectable Breadcrumbs
 7. Iconable SNS Button 
 
-## Details
-### 1. Cream-color-based Resposive Frame
-This theme has a Responsive, Wrap-and-Roundable, and Collapse-able features by using Bootstrap4.
-
-As of Basic Allocation, it is used 3 layers with `container`, `row`, and `col`.
-
-As of Allocation, it has basecally devided each of one by three with landscape direction (it means 1 row has 3 columns).
-
-As of Each Allocation, it has covered by `Bootstrap's card` or `HTML div`, and includes one partial function (it means _partial directory, and lower).
-
-### 2. Easy-Recognizable Card Arrangement
 
 
-### 3. Config-Adjustable Top 3 Navigation
+## Theme installation
+
+1) Run the following command, on the ***root directory*** of your Hexo site:
+
+```
+$ git clone https://github.com/hamkaz/hexo-theme-simple themes/simple
+```
+
+2) Update your ***site config*** `_config.yml` to set the ***theme*** to `simple`:
+
+i.e:
+
+```
+# Extensions
+## Plugins: http://hexo.io/plugins/
+## Themes: http://hexo.io/themes/
+theme: simple
+```
 
 
-### 4. Soft-and-Light Typography Impression
-Letter color is faded, once it moused over some letters, it is abled to strengthed from fade color to black. 
-This aims Sentense-based and Picture-based Theme for blogger and affiriater.
 
-### 5. Eye-catchable Picture Allocation
-In order to get strong impression of contents which you produce, it adopted tile-allocated design.
-As of each picture which is used by Index page, it used ratio-keepable Picture.
-When it used different ratio of landscape-to-portrat image, it has kept same frame ratio.
-So far, it shined Colorful and Photogenic pictures in this Index Page.
+## Theme configuration
 
-### 6. Icon-Selectable Breadcrumbs
+#### Favicon
+
+It can be changed the blog's favicon by replacing your favicon image in `/themes/simple/source/images/favicon.png`.
 
 
-### 7. Iconable SNS Button 
+
+## Post configuration in [front-matter](https://hexo.io/docs/front-matter.html).
+
+### Post title
+
+Use the title to specify the text displayed as the heading for your post.
+
+```
+title: My Awesome Portfolio Piece
+```
+
+### Post image
+
+Each post on this theme requires a cover image. If no cover image is provided, a default cover image is used. Specify your own image like this.
+
+```
+cover_image: /images/sample.jpg
+```
 
 
-## Closing
-Thanks for your attention to this repository.
 
+## Creator
+
+This theme was designed and created by HamKaz.
+
+
+
+## Bugs, Questions, and/or Requests
+
+If you have a bug, a question, and/or a feature request, please [click here](https://github.com/hamkaz/hexo-theme-simple/issues/new) to file an issue.
