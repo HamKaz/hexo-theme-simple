@@ -66,6 +66,12 @@ cover_image: /images/sample.jpg
 
 
 
+## Dependency and WireFrame 
+
+It can comfirm source dependency and wireframe on Document PDF in doc directory of this project.
+
+
+
 ## Creator
 
 This theme was designed and created by HamKaz.
