@@ -12,7 +12,7 @@
                                 break;
         case 'tag':             title = __('tags');
                                 length = site.tags.length;
-                                list = list_tags({show_count: theme.show_count});
+                                list = tagcloud({show_count: theme.show_count});
                                 break;
         case 'recent_posts':    title = __('recent_posts');
                                 length = site.posts.length;

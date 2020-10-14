@@ -1,40 +1,45 @@
 <%
-    var url = page.path
     var button = [
         { title: 'home', icon: 'fa fa-home', url: '' }
-    ]
+    ];
     var link, name, icon
     var lastindex = 0
-    var result = path.slice(path.indexOf(url), path.length)
-    var top = path.slice(0, path.indexOf(url))
+    var flag = 0
 
-    result.split('/').forEach(function(title, index){
-        if (index === 0) {
-            if (is_post()) {
-                if (config.permalink.match('category')) {
-                    link = button[0].url + '/categories/'
-                } else if (config.permalink.match('year')) {
-                    link = button[0].url + '/archives/'
+    path.slice(path.indexOf(path), path.length).split('/').forEach(function(title, index){
+        if ( flag != 1 ) {
+            if (index === 0) {
+                if (is_post()) {
+                    if (config.permalink.match('category')) {
+                        link = button[0].url + '/categories/'
+    
+                    } else if (config.permalink.match('year')) {
+                        link = button[0].url + '/archives/'
+                    }
+                } else {
+                    link = button[0].url + '/'
                 }
-            } else {
-                link = button[0].url + '/'
+                button[0].url = '/'
             }
-            button[0].url = '/'
-        }
-
-        if ( __(title) !== null ) {
+    
             if ( title.match(/\d{4}/) ) { name = title }
             else if ( title.match(/\d{1,2}/) ) { name = title }
             else {
-                name = __(title)
+                name = title
                 if (is_home()) {
                     icon = theme.icon.home
                 } else if (is_archive()) {
                     icon = theme.icon.archive
+                    if (index == 0) { name = __('archives') }
+                    if (title == 'page') { flag = 1 }
                 } else if (is_category()) {
                     icon = theme.icon.category
+                    if (index == 0) { name = __('categories') }
+                    if (title == 'page') { flag = 1 }
                 } else if (is_tag()) {
                     icon = theme.icon.tag
+                    if (index == 0) { name = __('tags') }
+                    if (title == 'page') { flag = 1 }
                 } else if (is_post()) {
                     icon = theme.icon.category
                 } else if ( is_page() && (title === 'categories')) {
@@ -45,14 +50,13 @@
                     icon = ''
                 }
             }
+    
+            button[index + 1] = {url: link + title + '/', icon: icon, title: name}
+            link = button[index + 1].url
+    
+            if (is_post()) { lastindex = index - 1 }
+            else { lastindex = index }
         }
-        else { name = title }
-
-        button[index + 1] = {url: link + title + '/', icon: icon, title: name}
-        link = button[index + 1].url
-
-        if (is_post()) { lastindex = index - 1 }
-        else { lastindex = index }
     })
 %>
 

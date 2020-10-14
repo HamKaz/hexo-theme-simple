@@ -12,3 +12,7 @@
         <% }); %>
     </ul>
 </div>
+
+<% if (page.total > 1){ %>
+    <%- partial('_partial/parts/pagination') %>
+<% } %>
