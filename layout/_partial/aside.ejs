@@ -1,0 +1,18 @@
+<aside class="card mx-2 my-2 sidebar-sticky">
+    <div class="row mx-3 mt-3 mb-0">
+    </div>
+    <% if (is_home() || is_page() || is_tag() || is_category() || is_archive()) { %>
+        <% theme.widgets.forEach(function(widget){ %>
+            <%- partial('_partial/parts/widget', { item: page, widget: widget }) %>
+            <%- partial('_partial/parts/holizontal_line') %>
+        <% }) %>
+    <% } else if (is_post()){ %>
+        <%- partial('_partial/parts/toc', { item: page }) %>
+        <%- partial('_partial/parts/holizontal_line') %>
+    <% } %>
+    <div class="h6 col-12 text-center mb-3">
+        <a href="#">
+            <i class="fa fa-long-arrow-up mr-2"></i><%= __('top') %>
+        </a>
+    </div>
+</aside>

@@ -1,0 +1,81 @@
+<%
+    var title, length, list;
+
+    switch (widget){
+        case 'archive':         title = __('archives');
+                                length = site.posts.length;
+                                list = list_archives({show_count: theme.show_count, type: theme.archive_type, format: "YYYY-MM"});
+                                break;
+        case 'category':        title = __('categories');
+                                length = site.categories.length;
+                                list = list_categories({show_count: theme.show_count});
+                                break;
+        case 'tag':             title = __('tags');
+                                length = site.tags.length;
+                                list = tagcloud({show_count: theme.show_count});
+                                break;
+        case 'recent_posts':    title = __('recent_posts');
+                                length = site.posts.length;
+                                list = false;
+                                break;
+        case 'about':           title = config.author;
+                                length = site.categories.length;
+                                list = false;
+                                break;
+        default:                title = 'untitled';
+    }
+%>
+
+<section class="row mx-3 mt-0 mb-0">
+    <div class="col-12 mx-0 my-0 px-0">
+		<div class="row">
+
+            <% if ((widget === 'archive') || (widget === 'category') || (widget === 'tag')) { %>
+                <div class="col-12 mx-auto mx-3 my-0">
+                    <% if (length){ %>
+                        <p class="h5 text-center"><%= title %></p>
+                    <% } %>
+                </div>
+                <div class="col-12 mx-auto mx-3 my-0">
+                    <% if (length){ %>
+                        <ul>
+                            <%- list %>
+                        </ul>
+                    <% } %>
+                </div>
+
+            <% } else if (widget === 'recent_posts') { %>
+                <div class="col-12 mx-auto mx-3 my-0">
+                    <% if (length){ %>
+                        <p class="h5 text-center mb-3"><%= title %></p>
+                    <% } %>
+                </div>
+                <div class="col-12 mx-auto mx-3 my-0">
+                    <% if (site.posts.length){ %>
+                        <% site.posts.sort('date', -1).limit(5).each(function(post){ %>
+                            <ul class="mx-0 my-0 px-0 py-0">
+                                <li class="date h6 mx-0 my-0 px-0 py-0">
+                                    <%= post.date.format(config.date_format) %>
+                                </li>
+                                <li class="h6 mx-0 mt-0 mb-2 px-0 py-0">
+                                    <a class="px-0 py-0" href="<%- url_for(post.path) %>"><%= post.title || '(no title)' %></a>
+                                </li>
+                            </ul>
+                        <% }); %>
+                    <% }; %>
+                </div>
+
+            <% } else if (widget === 'about') { %>
+                <div class="col-12 col-sm-8 col-md-4 col-lg-12 mx-auto mx-3 my-0">
+                    <%- partial('_partial/parts/image', { item: page, flag: 'about' }) %>
+                </div>
+                <div class="col-12 col-sm-8 col-md-8 col-lg-12 mx-auto mx-3 my-0">
+                    <p class="h5 text-center mx-0 mt-3 mb-0">
+                        <%- config.author || "Unnamed" %>
+                    </p>
+    	        </div>
+            <% } %>
+
+        </div>
+    </div>
+</section>

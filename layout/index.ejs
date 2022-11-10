@@ -1,0 +1,29 @@
+<% if (!is_home()) { %>
+    <nav class="row mx-3 my-3">
+        <%- partial('_partial/parts/breadcrumbs', { item: page }) %>
+    </nav>
+<% } %>
+
+<div class="row mx-3 mt-3 mb-0">
+</div>
+<% page.posts.each(function(item){ %>
+    <div class="row mx-3 my-0">
+        <div class="col-12 col-sm-10 col-md-4 col-lg-4 col-xl-6 mx-auto my-0 px-0">
+            <%- partial('_partial/parts/image', { item: item, flag: 'index' }) %>
+        </div>
+        <div class="col-12 col-sm-10 col-md-8 col-lg-8 col-xl-6 mx-auto my-0 px-0">
+            <div class="row text-center mx-0 text-md-left mx-md-1">
+                <div class="col-12 mx-0">
+                    <%- partial('_partial/parts/title', { item: item, flag: 'index' }) %>
+                </div>
+            </div>
+            <div class="row text-center mx-0 text-md-left mx-md-1">
+                <div class="col-12">
+                    <%- partial('_partial/parts/date', { item: item, flag: 'index' }) %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- partial('_partial/parts/holizontal_line') %>
+    <% }); %>
+<%- partial('_partial/parts/pagination') %>

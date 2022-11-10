@@ -1,0 +1,72 @@
+<%
+    var button = [
+        { title: 'home', icon: 'fa fa-home', url: '' }
+    ];
+    var link, name, icon
+    var lastindex = 0
+    var flag = 0
+
+    path.slice(path.indexOf(path), path.length).split('/').forEach(function(title, index){
+        if ( flag != 1 ) {
+            if (index === 0) {
+                if (is_post()) {
+                    if (config.permalink.match('category')) {
+                        link = button[0].url + '/categories/'
+    
+                    } else if (config.permalink.match('year')) {
+                        link = button[0].url + '/archives/'
+                    }
+                } else {
+                    link = button[0].url + '/'
+                }
+                button[0].url = '/'
+            }
+    
+            if ( title.match(/\d{4}/) ) { name = title }
+            else if ( title.match(/\d{1,2}/) ) { name = title }
+            else {
+                name = title
+                if (is_home()) {
+                    icon = theme.icon.home
+                } else if (is_archive()) {
+                    icon = theme.icon.archive
+                    if (index == 0) { name = __('archives') }
+                    if (title == 'page') { flag = 1 }
+                } else if (is_category()) {
+                    icon = theme.icon.category
+                    if (index == 0) { name = __('categories') }
+                    if (title == 'page') { flag = 1 }
+                } else if (is_tag()) {
+                    icon = theme.icon.tag
+                    if (index == 0) { name = __('tags') }
+                    if (title == 'page') { flag = 1 }
+                } else if (is_post()) {
+                    icon = theme.icon.category
+                } else if ( is_page() && (title === 'categories')) {
+                    icon = theme.icon.category
+                } else if ( is_page() && (title === 'tags')) {
+                    icon = theme.icon.tag
+                } else {
+                    icon = ''
+                }
+            }
+    
+            button[index + 1] = {url: link + title + '/', icon: icon, title: name}
+            link = button[index + 1].url
+    
+            if (is_post()) { lastindex = index - 1 }
+            else { lastindex = index }
+        }
+    })
+%>
+
+<ul class="mx-0 my-0">
+    <li>
+        <% for (key = 0; key <= lastindex; key++) { %>
+            <a href="<%= button[key].url %>" target="_self">
+                <i class="<%= button[key].icon %>"></i>
+                <%= button[key].title %>
+            </a>
+        <% } %>
+    </li>
+</ul>

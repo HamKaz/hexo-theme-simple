@@ -1,0 +1,18 @@
+<nav class="row mx-3 my-3 mb-0">
+    <%- partial('_partial/parts/breadcrumbs', { item: page }) %>
+</nav>
+
+<div class="row ml-5 mr-2 mt-0 mb-3">
+    <ul class="mx-3 my-0">
+        <% page.posts.each(function(item){ %>
+            <li class="border-left px-2 pt-2 pb-1" style="padding:10px">
+                <%- partial('_partial/parts/date', { item: item, flag: 'archive' }) %>
+                <%- partial('_partial/parts/title', { item: item, flag: 'archive' }) %>
+            </li>
+        <% }); %>
+    </ul>
+</div>
+
+<% if (page.total > 1){ %>
+    <%- partial('_partial/parts/pagination') %>
+<% } %>

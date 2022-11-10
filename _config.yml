@@ -1,0 +1,53 @@
+# Header
+menu:
+  Home: /
+  About: /about
+  Contact: /contact
+  PrivacyPolicy: /privacypolicy
+
+# Favicon
+favicon_url: images/favicon.ico
+
+# Default Image for Posts
+default_background_image: images/bg-img.png
+default_cover_image: default.jpg
+default_self_image: images/bg-img.png
+author_icon: author.jpg
+
+# Recommendation Post Category
+recommendation: recommend
+
+# Google Analytics Tracking ID
+google_analytics: true
+
+# Social Accounts
+email_url:
+twitter_url: https://twitter.com/VegegardenC
+facebook_url:
+youtube_url: https://www.youtube.com/channel/UCT5CUHwL7MU0WnmLtYz0Arw
+instagram_url: https://www.instagram.com/vegegarden.club
+linkedin_url:
+dribbble_url:
+github_url:
+googleplus_url:
+behance_url:
+fivehundredpx_url:
+
+# Disqus comments
+disqus_shortname:
+
+# Sidebar
+sidebar: right
+widgets:
+- about
+- category
+- tag
+- recent_posts
+- archive
+
+# icon
+icon:
+    home: 'fa fa-home'
+    archive: 'fa fa-list-alt'
+    category: 'fa fa-folder-open'
+    tag: 'fa fa-tag'

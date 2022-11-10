@@ -1,0 +1,22 @@
+<div class="container">
+    <header class="navbar navbar-light pt-3">
+        <a class="navbar-brand navbar-toggleable-sm" href="<%- config.root %>">
+            <span class="title d-sm-block d-sm-none"><%- config.title %><br></span>
+            <span class="subtitle d-sm-block d-sm-none"><%- config.subtitle %></span>
+        </a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-center mt-3 mt-md-0" id="navbarCollapse">
+            <span class="title d-block d-none"></span>
+            <ul class="navbar-nav ml-auto my-auto">
+                <% for (var i in theme.menu){ %>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+                    </li>
+                <% } %>
+            </ul>
+            <hr class="hidden-md-up" />
+        </div>
+    </header>
+</div>

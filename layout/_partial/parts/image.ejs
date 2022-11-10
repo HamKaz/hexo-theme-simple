@@ -1,0 +1,19 @@
+<div class="flex">
+    <div class="flex-item">
+        <figure class="image-trim mb-0">
+            <% if (config.cdn === 'allow') {%> 
+                <% if (flag === 'about') { %>
+                    <img src="<%- config.cdn_dir %><%- theme.author_icon || theme.default_cover_image %>" alt="<%- item.title || "Untitled" %>">
+                <% } else if ((flag === 'archive') || (flag === 'index') || (flag === 'post') || (flag === 'page') || (flag === 'nav')) { %>
+                    <img src="<%- config.cdn_dir %><%- item.cover_image || theme.default_cover_image %>" alt="<%- item.title || "Untitled" %>">
+                <% } %>
+            <% } else {%>
+                <% if (flag === 'about') { %>
+                    <img src="<%- config.root %><%- theme.author_icon || theme.default_cover_image %>" alt="<%- item.title || "Untitled" %>">
+                <% } else if ((flag === 'archive') || (flag === 'index') || (flag === 'post') || (flag === 'page') || (flag === 'nav')) { %>
+                    <img src="<%- config.root %><%- item.cover_image || theme.default_cover_image %>" alt="<%- item.title || "Untitled" %>">
+                <% } %>
+            <% } %>
+        </figure>
+    </div>
+</div>
