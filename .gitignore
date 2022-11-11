@@ -102,3 +102,9 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Google Analytics
+layout/_partial/parts/google-analytics.ejs
+
+# Google Adsence
+layout/_partial/parts/google-adsence.ejs
