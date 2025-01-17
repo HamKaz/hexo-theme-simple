@@ -36,7 +36,18 @@ i.e:
 theme: simple
 ```
 
+3) Change permalink setting as below
+(default)
+permalink: :year/:month/:day/:title/
+(permalink for the theme)
+permalink: :category/:pid/
 
+4) Change Google Analytics and Google AdSence sample ejs to runnable ejs
+Layout
+L partial
+  L parts
+    L google-adsence-sample.ejs -> google-adsence.ejs
+    L google-analytics-sample.ejs -> google-analytics.ejs
 
 ## Theme configuration
 
